@@ -1,28 +1,23 @@
 # opinioned
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-
-If you clone the repo, run `npm --i` to install `vendor.`
-<br>
-<br>
 
 ### ABOUT
 
 I applied
 
-* the functionality of a <mark>webshop</mark>
+* the functionality of a **webshop**
 to
 * [The New York Times Article Search API](https://developer.nytimes.com/)
 
-i.e. <mark>'buying'</mark> an opinion.
+i.e. **'buying'** an opinion.
 <br>
 <br>
 
 ### HOW IT WORKS
 
-Selecting articles on the newsfeed adds them to the <mark>'shopping cart'</mark> – the fixed bottom bar and the selected page.
+Selecting articles on the newsfeed adds them to the **'shopping cart'** – the fixed bottom bar and the selected page.
 
-<mark>'Buying'</mark> an article from your selection means <mark>'delivering'</mark> it as the headline to the newsfeed page.
+**'Buying'** an article from your selection means **'delivering'** it as the headline to the newsfeed page.
 <br>
 <br>
 
@@ -43,6 +38,11 @@ On **key-up**
 Select a **single scientific text** out of a **list of texts**
 * via **ActivatedRoute**
 * coming from a **JSON.**
+<br>
+<br>
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.<br>
+If you clone the repo, run `npm --i` to install `vendor.`
 <br>
 <br>
 
