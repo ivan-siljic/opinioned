@@ -15,9 +15,9 @@ i.e. **'buying'** an opinion.
 
 ### HOW IT WORKS
 
-Selecting articles on the newsfeed adds them to the **'shopping cart'** – the fixed bottom bar and the selected page.
+Selecting articles on the newsfeed adds them to the **'shopping cart'** – the fixed bottom bar and the _selected_ page.
 
-**'Buying'** an article from your selection means **'delivering'** it as the headline to the newsfeed page.
+**'Buying'** an article from your selection means **'delivering'** it as the headline to the _newsfeed_ page.
 <br>
 <br>
 
