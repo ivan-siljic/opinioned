@@ -24,6 +24,10 @@ const routes: Routes = [
 {
 	path: "general/:fixedId", 
 	component: GeneralComponent
+},
+{
+	path: "**", 
+	component: HomeComponent
 }
 ];
 
