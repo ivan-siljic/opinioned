@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-lg-8">
+			<div *ngIf="fixed">
+				<div class="row">
+					<div class="col-12">
+						<h3>{{ fixed.header }}</h3>
+					</div>
+				</div>
+				<div class="row my-2">
+					<div class="col-12">
+						<p><strong>ABSTRACT:</strong>
+						<br>
+						{{ fixed.abstract }}</p>
+					</div>
+				</div>
+				<div class="row border rounded bg-light p-2">
+				<div class="col-12">
+					<p><strong>CITATION:</strong>
+					<br>
+					<em><small>{{ fixed.citation }}</small></em></p>
+				</div>
+		</div>
+		<div class="row my-3 my-lg-5">
+			<div class="col-12">
+				<button class="btn btn-secondary" (click)="backClicked()">Back</button>
+			</div>
+		</div>
+		<hr>
+		</div>
+		</div>
+	</div>
+	
+		<footer></footer>
+
+</div>

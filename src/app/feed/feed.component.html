@@ -1,0 +1,122 @@
+<div class="container">
+			<div *ngIf="one; else elseOne">
+				<div class="row my-5">
+					<div class="col-10 col-lg-10 m-auto">
+						<h1 class="display-3">{{ one.headline.main }}</h1>
+					</div>
+				</div>
+			</div>
+		
+			<ng-template #elseOne>
+				<div class="row my-5">
+					<div class="col-10 col-lg-8 m-auto">
+						<h1 class="display-3">Fill the <mark>'shopping cart'</mark> with
+							<p class="my-4 text-center"><button class="btn btn-secondary btn-lg px-3 py-0" style="font-size: 1em;" disabled>Agree</button>
+							</p> 
+							<p class="text-nowrap">– <mark>'buy'</mark> with</p> 
+							<p class="my-4 text-center">
+								<button class="btn btn-outline-secondary px-3 py-0 text-nowrap" style="font-size: 1em;" disabled>Agree most</button>
+							</p>
+							<p class="text-nowrap">on <a routerLink="/votes" class="text-muted">selected</a>.</p></h1>
+					</div>
+				</div>
+			</ng-template>
+
+	<div class="row mt-md-5 mb-md-4">
+		<div class="col-12 col-md-8 col-lg-6 mx-auto">
+			<div class="row">
+			<div class="col-12 col-sm-4 mb-3">
+				<button class="btn btn-info btn-block" (click)="api('Culture')">Culture</button>
+			</div>
+			<div class="col-12 col-sm-4 mb-3">
+				<button class="btn btn-info btn-block" (click)="api('Business')">Business</button>
+			</div>
+			<div class="col-12 col-sm-4 mb-3">
+				<button class="btn btn-info btn-block" (click)="api('Sports')">Sports</button>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row mb-4 mt-sm-3 mt-4">
+		<div class="col-12  col-md-8 col-lg-6 mx-auto">
+			<div class="row">
+				<div class="col-12 col-md-9 col-lg-9 mx-auto">
+					<input type="text" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText"
+					        placeholder="Real-time search with highlighted text" autofocus>
+				</div>
+				<div class="col-12 col-md-3 col-lg-3 mt-3 mt-md-0">
+					<button class="btn btn-outline-secondary btn-block" (click)="clearSearch()">clear</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- {{ errorMessage }} -->
+	<div *ngIf="opinions.length > 0; else elseBlock">
+			<div class="row">
+				<!-- <div class="col-12"> -->
+					<ng-container *ngFor="let opinion of opinions | appFilter: searchText">
+						
+							<!-- <div class="row"> -->
+								<div class="col-12 col-md-10 col-lg-6 col-xl-4 my-3">
+									<div class="card h-100">
+										<div class="card-header">
+											<span class="badge bg-info text-light p-2">{{ opinion.news_desk }}</span>
+										</div>
+										<div class="card-body d-flex flex-column">
+											<a href="{{ opinion.web_url }}" class='text-dark' target="_blank">
+												<h5 [innerHTML]="opinion.headline.main | highlight : searchText"></h5>
+											</a>		
+											<p [innerHTML]="opinion.snippet | highlight : searchText"></p>
+											<div class="row mt-auto">
+												<div class="col-12 col-sm-4">
+													<button class="btn btn-secondary btn-block" type="submit" (click)="agreed(opinion)">Agree</button>
+												</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<span class="text-muted"><small><em>{{ opinion.pub_date | date }}</em></small></span>
+										</div>
+									</div>
+								</div>
+					</ng-container>
+			</div>
+	</div>
+						<ng-template #elseBlock>
+							<div class="row my-5">
+								<div class="col-6 mx-auto">
+									<h3><em>Currently there are no items in this feed available. Please check back later...</em></h3>
+								</div>
+							</div>
+						</ng-template>
+					
+				<!-- </div> -->
+			<!-- </div> -->
+	<div class="row">
+		<div class="col-12 col-lg-8">
+			<a href="https://developer.nytimes.com/" title="The New York Times" target="_blank"><img src="assets/poweredby_nytimes_150c.png"></a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 mt-5">
+			<h3 class="text-uppercase"><small>Recommended readings:</small></h3>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-lg-10">
+			<div *ngFor="let fixed of general; index as fixedId">
+				<a [routerLink]="['/general', fixedId]" class='text-dark'>
+					<h5 class="rounded bg-light p-3 my-3">{{ fixed.header }}</h5>
+				</a>
+			</div>
+		</div>
+	</div>
+			
+
+					<sidebar></sidebar>
+
+	<div class="row" style="height: 40vh;"></div>
+</div>

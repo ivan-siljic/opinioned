@@ -1,0 +1,32 @@
+
+			<div class="row">
+				<div class="fixed-bottom">
+					<div class="container d-block">
+						<div class="row">
+							<div class="col-12 col-lg-8 p-3 mb-sm-2 bg-light border rounded mx-auto" style="opacity: 0.8;">
+								<a class='text-dark' routerLink="/votes">
+									<h5>selected
+									<span class="d-sm-none badge badge-pill badge-warning text-white" *ngIf="votes.length > 0">
+									{{ uniqueVotes.length | number }}
+									</span>
+									</h5>
+								</a>
+								<div *ngIf="votes.length > 0; else elseBlock">
+									<div class="d-none d-sm-block overflow-auto" style="max-height: 10vh;">
+										<ul class="list-group mt-3 ml-2" *ngFor="let vote of uniqueVotes">
+											<li class="list-group-item list-group-item-light text-truncate">
+												<a href="{{ vote.web_url }}" class='text-dark' target="_blank">
+													{{ vote.headline.main }}
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<ng-template #elseBlock>
+									<p class="d-none d-sm-block"><button class="btn btn-secondary px-1 py-0" style="font-size: 0.8em;" disabled>Agree</button> with an opinion to put it in the <mark>'shopping cart'</mark> here...</p>
+								</ng-template>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>

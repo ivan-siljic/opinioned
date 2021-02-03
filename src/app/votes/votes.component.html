@@ -1,0 +1,63 @@
+<div class="container">
+	<div *ngIf="votes.length > 0; else elseBlock">
+		<div class="row mb-5">
+			<div class="col-10 col-lg-8 m-auto">
+				<h1 class="display-3"><mark>'Buy'</mark> an opinion with <p class="my-4 text-center">
+								<button class="btn btn-outline-secondary px-3 py-0 text-nowrap" style="font-size: 1em;" disabled>Agree most</button>
+							</p> to have it <mark>'delivered'</mark>
+							<p class="text-nowrap">
+								to <a routerLink="/feed" class="text-muted">newsfeed</a>:
+							</p>
+				</h1>
+			</div>
+		</div>
+		<div class="row">
+			<ng-container *ngFor="let vote of uniqueVotes">
+				<div class="col-12 col-md-10 col-lg-6 col-xl-4 my-3">
+					<div class="card h-100">
+						<div class="card-header d-flex justify-content-between">
+							<div class="badge bg-info text-light p-2">{{ vote.news_desk }}</div>
+							<div><a class="text-danger" (click)="deleteVote(vote)">delete</a></div>
+						</div>
+						<div class="card-body d-flex flex-column">
+							<a href="{{ vote.web_url }}" class='text-dark' target="_blank">
+								<h5>{{ vote.headline.main }}</h5>
+							</a>		
+							<p>{{ vote.snippet }}</p>
+							<div class="row mt-auto">
+								<div class="col-12 col-sm-6">
+									<button class="btn btn-outline-secondary btn-block" (click)="theOne(vote)">Agree most</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<span class="text-muted"><small><em>{{ vote.pub_date | date }}</em></small></span>
+						</div>
+					</div>
+				</div>
+			</ng-container>
+		</div>
+	</div>
+
+	<ng-template #elseBlock>
+		<div class="row my-5">
+			<div class="col-10 col-lg-6 m-auto">
+			<h1 class="display-3"><p class="my-4 text-center"><button class="btn btn-secondary btn-lg px-3 py-0" style="font-size: 1em;" disabled>Agree</button>
+							</p> with an opinion on the <a routerLink="/feed" class="text-muted">newsfeed</a> to add it to the <mark>'shopping cart'</mark> here ...</h1>
+		</div>
+		</div>
+	</ng-template>
+
+	<div class="row my-5">
+		<div class="col-12">
+			<button class="btn btn-secondary" (click)="backClicked()">Back</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 col-lg-8">
+			<a href="https://developer.nytimes.com/" title="The New York Times" target="_blank"><img src="assets/poweredby_nytimes_150c.png"></a>
+		</div>
+	</div>
+	<hr>
+	<footer></footer>	
+</div>
