@@ -1,27 +1,49 @@
-# Opinioned
+# opinioned
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
-## Development server
+If you clone the repo, run `npm --i` to install `vendor.`
+<br>
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### ABOUT
 
-## Code scaffolding
+I applied
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* the functionality of a <mark>webshop</mark>
+to
+* [The New York Times Article Search API](https://developer.nytimes.com/)
 
-## Build
+i.e. <mark>'buying'</mark> an opinion.
+<br>
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### HOW IT WORKS
 
-## Running unit tests
+Selecting articles on the newsfeed adds them to the <mark>'shopping cart'</mark> – the fixed bottom bar and the selected page.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<mark>'Buying'</mark> an article from your selection means <mark>'delivering'</mark> it as the headline to the newsfeed page.
+<br>
+<br>
 
-## Running end-to-end tests
+### OTHER FUNCTIONALITIES
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Filters
+Each category on the newsfeed gets 
+* a new **API-request** from the selected _The New York Times_ **news-desk** 
+* with preset on Culture<br>AND<br>
+* **'opinion'** as keyword.
 
-## Further help
+#### Search
+On **key-up** 
+* **highlights** the entered text and
+* **filters** the newsfeed down.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Recommendations
+Select a **single scientific text** out of a **list of texts**
+* via **ActivatedRoute**
+* coming from a **JSON.**
+<br>
+<br>
+
+[![The New York Times Branding](https://developer.nytimes.com/files/poweredby_nytimes_150c.png?v=1583354208354)](https://developer.nytimes.com/)
