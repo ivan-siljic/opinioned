@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="976px" height="200px" viewBox="0 0 976 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>opinioned_logo_info</title>
+    <g id="opinioned_logo_info" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold">
+        <text id="O" font-family="Alegreya-BoldItalic, Alegreya" font-size="148.514851" font-style="italic" letter-spacing="18.5643564" fill="#000000">
+            <tspan x="-4" y="104.950495">o</tspan>
+        </text>
+        <text id="P" font-family="Alegreya-BoldItalic, Alegreya" font-size="148.514851" font-style="italic" letter-spacing="18.5643564" fill="#000000">
+            <tspan x="87.5841584" y="104.950495">p</tspan>
+        </text>
+        <text id="I" font-family="Alegreya-BoldItalic, Alegreya" font-size="148.514851" font-style="italic" letter-spacing="18.5643564" fill="#000000">
+            <tspan x="181.643564" y="104.950495">i</tspan>
+        </text>
+        <text id="N" font-family="Alegreya-BoldItalic, Alegreya" font-size="148.514851" font-style="italic" letter-spacing="18.5643564" fill="#000000">
+            <tspan x="241.049505" y="104.950495">n</tspan>
+        </text>
+        <text id="I" stroke="#000000" stroke-width="4" font-family="Metropolis-BoldItalic, Metropolis" font-size="247.524752" font-style="italic" letter-spacing="30.9405941" fill="#5BC0DE">
+            <tspan x="330.356436" y="196">I</tspan>
+        </text>
+        <text id="O" stroke="#000000" stroke-width="5" transform="translate(479.742574, 159.653465) scale(1, -1) translate(-479.742574, -159.653465) " font-family="Metropolis-Bold, Metropolis" font-size="123.762376" letter-spacing="15.470297" fill="#FFFFFF">
+            <tspan x="421.742574" y="208.653465">O</tspan>
+        </text>
+        <text id="N" stroke="#000000" stroke-width="5" transform="translate(641.108911, 159.653465) scale(1, -1) translate(-641.108911, -159.653465) " font-family="Metropolis-Bold, Metropolis" font-size="123.762376" letter-spacing="15.470297" fill="#FFFFFF">
+            <tspan x="585.108911" y="208.653465">N</tspan>
+        </text>
+        <text id="E" stroke="#000000" stroke-width="5" transform="translate(788.549505, 159.653465) scale(1, -1) translate(-788.549505, -159.653465) " font-family="Metropolis-Bold, Metropolis" font-size="123.762376" letter-spacing="15.470297" fill="#FFFFFF">
+            <tspan x="741.049505" y="208.653465">E</tspan>
+        </text>
+        <text id="D" stroke="#000000" stroke-width="5" transform="translate(939.613861, 159.653465) scale(1, -1) translate(-939.613861, -159.653465) " font-family="Metropolis-Bold, Metropolis" font-size="123.762376" letter-spacing="15.470297" fill="#FFFFFF">
+            <tspan x="884.613861" y="208.653465">D</tspan>
+        </text>
+    </g>
+</svg>
