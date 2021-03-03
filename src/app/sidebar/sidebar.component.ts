@@ -20,7 +20,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngDoCheck(){
-    this.votes = this.votesService.getVotes();
+    this.votes = this.votesService.fetchVotes();
     this.uniqueVotes = Array.from(new Set(this.votes));
   }
 

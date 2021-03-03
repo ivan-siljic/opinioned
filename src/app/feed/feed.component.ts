@@ -25,8 +25,8 @@ export class FeedComponent implements OnInit {
   constructor(private votesService: VotesService, private http: HttpClient) {
   }
 
-	agreed(opinion) {
-   		this.votesService.agreed(opinion);
+	agreeOpinion(opinion) {
+   		this.votesService.agreeOpinion(opinion);
  	}
 
   clearSearch() {
@@ -36,8 +36,6 @@ export class FeedComponent implements OnInit {
   api(category='Culture') {
 
     const headers = { 'Authorization': 'KFz4A9VFkbCHpPAcFj5AV1ZF1WUfAXyQ' }
-
-// https://cors-anywhere.herokuapp.com/
 
     this.http.get<any>('https://api.nytimes.com/svc/search/v2/articlesearch.json?fl=headline%2C%20snippet%2C%20web_url%2Cnews_desk%2Cpub_date&fq=news_desk%3A(%22'+ category +'%22)&q=opinion&api-key=KFz4A9VFkbCHpPAcFj5AV1ZF1WUfAXyQ').subscribe({
       next: data => {
@@ -52,12 +50,12 @@ export class FeedComponent implements OnInit {
   }
 
   ngDoCheck(){
-    this.one = this.votesService.getTheOne();
+    this.one = this.votesService.fetchTheOne();
   }
 
   ngOnInit(): void {
     this.api();
-  	this.one = this.votesService.getTheOne();
+  	this.one = this.votesService.fetchTheOne();
 
     
     

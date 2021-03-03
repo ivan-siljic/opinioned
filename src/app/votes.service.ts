@@ -12,11 +12,11 @@ category:String = '';
 
   constructor() { }
 
- agreed(opinion) {
+ agreeOpinion(opinion) {
    this.votes.push(opinion);
  }
 
- getVotes() {
+ fetchVotes() {
    return this.votes;
  }
 
@@ -28,16 +28,15 @@ category:String = '';
     }        
 }
 
-
- theOne(vote) {
+ selectTheOne(vote) {
    this.one = vote;
  }
 
- getTheOne() {
+ fetchTheOne() {
    return this.one;
  }
 
- catFilt(category) {
+ filterCategory(category) {
     this.category = category;
   }
 

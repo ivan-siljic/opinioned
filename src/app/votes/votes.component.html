@@ -26,7 +26,7 @@
 							<p>{{ vote.snippet }}</p>
 							<div class="row mt-auto">
 								<div class="col-12 col-sm-6">
-									<button class="btn btn-outline-secondary btn-block" (click)="theOne(vote)">Agree most</button>
+									<button class="btn btn-outline-secondary btn-block" (click)="selectTheOne(vote)">Agree most</button>
 								</div>
 							</div>
 						</div>
@@ -50,7 +50,7 @@
 
 	<div class="row my-5">
 		<div class="col-12">
-			<button class="btn btn-info" (click)="backClicked()">Back</button>
+			<button class="btn btn-info" (click)="goBack()">Back</button>
 		</div>
 	</div>
 	<div class="row">

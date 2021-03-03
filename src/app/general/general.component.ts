@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 import { General } from '../general';
 
@@ -15,7 +15,7 @@ fixed;
 
   constructor(private route: ActivatedRoute, private _location: Location) { }
 
-  backClicked() {
+  goBack() {
     this._location.back();
   }
 
